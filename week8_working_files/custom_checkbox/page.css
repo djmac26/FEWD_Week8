@@ -1,0 +1,91 @@
+body {
+  font: 1em sans-serif;
+}
+
+form {
+  display: inline-block;
+
+  padding: 0;
+  margin : 0;
+}
+
+fieldset {
+  border : 1px solid #CCC;
+  border-radius: 5px;
+  margin : 0;
+  padding: 1em;
+}
+
+label {
+  cursor : pointer;
+}
+
+p {
+  margin : 0;
+}
+
+p+p {
+  margin : .5em 0 0;
+}
+
+label, .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+/* Custom checkbox element styling */
+
+:root input[type=checkbox] {
+  /* original check box is pushed outside the viewport */
+  position: absolute;
+  left: -1000em;
+}
+
+:root input[type=checkbox] + label:before {
+  content: "";
+  display: inline-block;
+  width  : 40px;
+  height : 40px;
+  margin : 0 .5em 0 0;
+  background: url("img/green-tick.png") no-repeat 0 0;
+  background-size: 40px 160px;
+
+/* The following is used to adjust the position of
+   the check boxes on the text baseline */
+
+  vertical-align: middle;
+}
+
+/*
+We use the :checked and :disabled pseudo-classes on the original check box
+to change the state of our custom check box accordingly. Because we're using
+a CSS sprite, all we need to do is change the position of the background.
+*/
+
+:root input[type=checkbox]:checked + label:before {
+  background-position: 0 -40px;
+}
+
+:root input[type=checkbox]:disabled + label:before {
+  background-position: 0 -80px;
+}
+
+:root input[type=checkbox]:checked:disabled + label:before {
+  background-position: 0 -120px;
+}
+
+/*
+The last (but very important) thing: when a user uses the keyboard to
+navigate from one form widget to another, each widget should be focused
+visually. Because we hide the native check boxes, we have to implement
+this feature ourselves to let the user know where they are in the form.
+The following CSS implements the focusing of our custom checkboxes.
+*/
+
+:root input[type=checkbox]:focus + label:before {
+  outline: 1px dotted black;
+}
