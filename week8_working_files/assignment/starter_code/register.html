@@ -28,7 +28,54 @@
 		<section id="main">
 			<div class="container">
 				<section id="contact">
-					<input type="submit" value="Register Now!">
+
+          <form class="main-box" id="required">
+						<ul>
+							<li>
+								<label for="form-name">Name</label>
+								<input type="text" placeholder="Full Name" id="form-name" name="name">
+							</li>
+
+							<li>
+								<label for="form-email">Email</label>
+								<input type="email" placeholder="E-mail@example.com" id="form-email" name="email">
+							</li>
+
+
+							<li>
+								<label for="form-phone">Phone</label>
+								<input type="tel" placeholder="Mobile Number" id="form-phone" name="phone">
+							</li>
+
+							<li>
+								<label for="form-state">State</label>
+								<select id="form-state" name="state">
+									<option>Please Select</option>
+									<option value="US">United States</option>
+									<option value="EU">Europe</option>
+									<option value="AS">Asia</option>
+									<option value="AU">Australia</option>
+								</select>
+							</li>
+
+							<li>
+								<label for="form-password">Password</label>
+								<input type="password" id="form-password">
+							</li>
+
+							<li>
+								<label for="form-service">Service</label>
+								<input type="radio" id="form-service" name="service" value="Business"><label class="radio" for="form-service">Business</label>
+								<input type="radio" id="form-service" name="service" value="Leisure"><label class="radio" for="form-service">Leisure</label>
+							</li>
+
+							<li>
+								<input type="checkbox" id="terms"><label class="checkbox">I agree to the terms</label>
+							</li>
+						</ul>
+
+						<button type="submit">Register Now!</button>
+          </form>
 				</section>
 			</div>
 		</section>
@@ -43,5 +90,8 @@
 
 			<p class="copyright">Copyright 2015. Relaxr.</p>
 		</footer>
+
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
