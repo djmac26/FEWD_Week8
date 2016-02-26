@@ -45,6 +45,11 @@ Developer @GA in NYC
 /* BASE STYLES
 /*******************************************/
 
+span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 body {
   color: #f0efef;
   font-size: 26px;
@@ -134,6 +139,12 @@ header nav ul li {
 }
 header nav ul li a {
   color: #f9e42e;
+}
+
+.thanks {
+  font-size: 45px;
+  padding-bottom: 260px;
+
 }
 
 #hero {
@@ -407,4 +418,7 @@ footer p {
   #sidebar img {
     display: none;
   }
+
 }
+
+/* Registration Form */
